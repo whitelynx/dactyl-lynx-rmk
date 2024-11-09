@@ -1,0 +1,159 @@
+# Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
+[keyboard]
+name = "Dactyl Lynx"
+product_name = "Dactyl Lynx"
+vendor_id = 0xFEED
+product_id = 0xCAD1
+manufacturer = "David H. Bronke"
+chip = "rp2040"
+
+
+[layout]
+# WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
+# row2col = true
+rows = 14
+cols = 6
+layers = 6
+
+keymap = [
+    [
+        ["Application", "Kc1", "Kc2", "Kc3", "Kc4", "Kc5"],
+        ["Tab", "Quote", "Comma", "Dot", "P", "Y"],
+        ["Escape", "A", "O", "E", "U", "I"],
+        ["LShift", "Semicolon", "Q", "J", "K", "X"],
+        ["__", "LCtrl", "Grave", "Equal", "LeftBracket", "RightBracket"],
+        ["LCtrl", "LAlt", "LGui", "LShift", "Delete", "MO(3)"],
+        ["Backspace", "__", "__", "__", "__", "__"],
+        ["Kc6", "Kc7", "Kc8", "Kc9", "Kc0", "Backslash"],
+        ["F", "G", "C", "R", "L", "Slash"],
+        ["D", "H", "T", "N", "S", "Minus"],
+        ["B", "M", "W", "V", "Z", "RShift"],
+        ["__", "Left", "Down", "UP", "Right", "RGui"],
+        ["RGui", "RAlt", "RCtrl", "MO(3)", "Enter", "RShift"],
+        ["__", "Space", "__", "__", "__", "__"]
+    ],
+    [
+        ["Application", "Kc1", "Kc2", "Kc3", "Kc4", "Kc5"],
+        ["Tab", "Q", "W", "E", "R", "T"],
+        ["Escape", "A", "S", "D", "F", "G"],
+        ["LShift", "Z", "X", "C", "V", "B"],
+        ["__", "LCtrl", "Grave", "Equal", "LeftBracket", "RightBracket"],
+        ["LCtrl", "LAlt", "LGui", "LShift", "Delete", "MO(3)"],
+        ["Backspace", "__", "__", "__", "__", "__"],
+        ["Kc6", "Kc7", "Kc8", "Kc9", "Kc0", "Minus"],
+        ["Y", "U", "I", "O", "P", "Backslash"],
+        ["H", "J", "K", "L", "Semicolon", "Quote"],
+        ["N", "M", "Comma", "Dot", "Slash", "RShift"],
+        ["__", "Left", "Down", "UP", "Right", "RGui"],
+        ["RGui", "RAlt", "RCtrl", "MO(3)", "Enter", "RShift"],
+        ["__", "Space", "__", "__", "__", "__"]
+    ],
+    [
+        ["Escape", "Kc1", "Kc2", "Kc3", "Kc4", "Kc5"],
+        ["Tab", "Tab", "Q", "W", "E", "R"],
+        ["LCtrl", "LCtrl", "A", "S", "D", "F"],
+        ["LShift", "LShift", "Z", "X", "C", "V"],
+        ["__", "Kc6", "Kc7", "Kc8", "Kc9", "Kc0"],
+        ["LCtrl", "LAlt", "__", "LShift", "Enter", "MO(3)"],
+        ["Space", "__", "__", "__", "__", "__"],
+        ["Kc6", "Kc7", "Kc8", "Kc9", "Kc0", "Minus"],
+        ["T", "Y", "U", "I", "O", "P"],
+        ["G", "H", "J", "K", "L", "Semicolon"],
+        ["B", "N", "M", "Comma", "Dot", "Slash"],
+        ["__", "Left", "Down", "UP", "Right", "RGui"],
+        ["RGui", "RAlt", "RCtrl", "MO(3)", "Enter", "RShift"],
+        ["__", "Space", "__", "__", "__", "__"]
+    ],
+    [
+        ["Bootloader", "__", "__", "__", "__", "__"],
+        ["__", "__", "__", "__", "__", "__"],
+        ["__", "__", "__", "__", "__", "__"],
+        ["__", "__", "DF(1)", "DF(0)", "DF(2)", "__"],
+        ["__", "__", "__", "__", "__", "__"],
+        ["__", "__", "__", "__", "__", "__"],
+        ["__", "__", "__", "__", "__", "__"],
+        ["__", "__", "__", "__", "__", "__"],
+        ["TG(4)", "__", "__", "__", "__", "__"],
+        ["__", "__", "__", "TG(4)", "__", "__"],
+        ["__", "TG(5)", "__", "__", "__", "__"],
+        ["__", "Home", "PageDown", "PageUp", "End", "__"],
+        ["__", "__", "__", "__", "__", "__"],
+        ["__", "__", "__", "__", "__", "__"]
+    ],
+    [
+        ["Help", "F1", "F2", "F3", "F4", "F5"],
+        ["Tab", "F6", "F7", "F8", "F9", "F10"],
+        ["Escape", "F11", "F12", "F13", "F14", "F15"],
+        ["LShift", "F16", "F17", "F18", "F19", "F20"],
+        ["__", "LCtrl", "F21", "F22", "F23", "F24"],
+        ["LCtrl", "LAlt", "LGui", "LShift", "Delete", "MO(3)"],
+        ["Backspace", "__", "__", "__", "__", "__"],
+        ["Calculator", "LeftBracket", "RightBracket", "WM(Kc9, LShift)", "WM(Kc0, LShift)", "Backslash"],
+        ["NumLock", "Kp7", "Kp8", "Kp9", "KpAsterisk", "KpSlash"],
+        ["KpEqual", "Kp4", "Kp5", "Kp6", "KpPlus", "KpMinus"],
+        ["KpComma", "Kp1", "Kp2", "Kp3", "KpDot", "RShift"],
+        ["__", "Left", "Down", "UP", "Right", "RGui"],
+        ["RGui", "RAlt", "RCtrl", "MO(1)", "KpEnter", "Kp0"],
+        ["__", "Space", "__", "__", "__", "__"]
+    ],
+    [
+        ["__", "MouseAccel0", "MouseAccel1", "MouseAccel2", "__", "WwwRefresh"],
+        ["__", "__", "__", "__", "MouseWheelLeft", "MouseWheelRight"],
+        ["MouseBtn5", "MouseBtn4", "MouseBtn3", "MouseBtn2", "MouseBtn1", "MouseWheelUp"],
+        ["__", "Undo", "Cut", "Copy", "Paste", "MouseWheelDown"],
+        ["__", "Again", "__", "__", "__", "__"],
+        ["__", "__", "__", "__", "__", "__"],
+        ["WwwBack", "__", "__", "__", "__", "__"],
+        ["MediaEject", "PrintScreen", "ScrollLock", "Pause", "__", "SystemSleep"],
+        ["MediaSelect", "__", "__", "__", "__", "Help"],
+        ["BrightnessUp", "MouseLeft", "MouseDown", "MouseUp", "MouseRight", "Execute"],
+        ["BrightnessDown", "AudioMute", "MediaPlayPause", "MediaStop", "__", "Select"],
+        ["__", "MediaPrevTrack", "AudioVolDown", "AudioVolUp", "MediaNextTrack", "Stop"],
+        ["__", "__", "__", "__", "__", "__"],
+        ["__", "WwwForward", "__", "__", "__", "__"]
+    ]
+]
+
+[light]
+# All light pins are high-active by default, uncomment if you want it to be low-active
+# capslock.pin = "PB2"
+# capslock.low_active = true
+# scrolllock.pin = "PA3"
+# scrolllock.low_active = true
+# Just ignore if no light pin is used for it
+# numslock.pin = "PA5"
+# numslock.low_active = true
+
+[storage]
+# Storage feature is enabled by default
+# enabled = false
+
+# !!! Warning: RMK uses last 2 sectors of your microcontroller's flash by default. You have to ensure that those flash space is not used.
+# If you're using a bootloader which puts itself at the end of the flast, like Adafruit_nRF52_Bootloader, RMK will break the bootloader.
+# Setting the `start_addr` manually to avoid this. See: https://haobogu.github.io/rmk/storage.html
+
+
+[split]
+connection = "serial"
+
+[split.central]
+rows = 7
+cols = 6
+row_offset = 0
+col_offset = 0
+serial = [
+    { instance = "UART0", tx_pin = "PIN_0", rx_pin = "PIN_1" },
+]
+input_pins = ["PIN_8", "PIN_9", "PIN_10", "PIN_11", "PIN_12", "PIN_13", "PIN_14"]
+output_pins = ["PIN_2", "PIN_3", "PIN_4", "PIN_5", "PIN_6", "PIN_7"]
+
+[[split.peripheral]]
+rows = 7
+cols = 6
+row_offset = 7
+col_offset = 0
+serial = [
+    { instance = "UART0", tx_pin = "PIN_0", rx_pin = "PIN_1" },
+]
+input_pins = ["PIN_8", "PIN_9", "PIN_10", "PIN_11", "PIN_12", "PIN_13", "PIN_14"]
+output_pins = ["PIN_2", "PIN_3", "PIN_4", "PIN_5", "PIN_6", "PIN_7"]
