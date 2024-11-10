@@ -12,6 +12,7 @@ def text_to_lookup(text):
             result[key] = value
     return result
 
+
 qmk_key_to_rmk = text_to_lookup('''
 KC_NO,XXXXXXX	No
 KC_TRANSPARENT,KC_TRNS,_______	No
@@ -299,7 +300,9 @@ HYPR	LCtrl | LShift | LAlt | LGui
 qmk_mod_to_rmk = text_to_lookup(qmk_mod_to_rmk_text)
 qmk_key_to_rmk[-1] = 'No'
 
-qmk_mods = '|'.join(line.split('\t')[0] for line in qmk_mod_to_rmk_text.split('\n')).replace(',', '|')
+qmk_mods = '|'.join(
+    line.split('\t')[0] for line in qmk_mod_to_rmk_text.split('\n')
+).replace(',', '|')
 with_modifiers = re.compile(r'^(' + qmk_mods + r')\((.*)\)$')
 
 
@@ -314,7 +317,8 @@ class Converter:
             match = with_modifiers.match(qmk_or_vial_keycode)
             if match is not None:
                 modifier, key = match.groups()
-                return f'WM({self.get_rmk_keycode(key)}, {qmk_mod_to_rmk[modifier]})'
+                rmk_mod = qmk_mod_to_rmk[modifier]
+                return f'WM({self.get_rmk_keycode(key)}, {rmk_mod})'
         return qmk_key_to_rmk[qmk_or_vial_keycode]
 
     def convert_key(self, key):
@@ -336,16 +340,21 @@ class Converter:
     def convert_layer(self, layer):
         converted_rows = (self.convert_row(row) for row in layer)
         if self.output_rust:
-            return f'layer!([\n            {',\n            '.join(converted_rows)}\n        ])'
+            return '\n'.join(
+                'layer!([',
+                ',\n            '.join(converted_rows),
+                '])'
+            )
         else:
             return f'[\n        {',\n        '.join(converted_rows)}\n    ]'
 
-    def convert_parsed_vial_layout(self, parsed_layout):
-        converted_layers = (self.convert_layer(layer) for layer in parsed_layout)
+    def convert_parsed_vial_layout(self, vial_layout):
+        converted_layers = (self.convert_layer(layer) for layer in vial_layout)
         if self.output_rust:
             return '\n'.join((
                 '#[rustfmt::skip]',
-                'pub fn get_default_keymap() -> [[[KeyAction; COL]; ROW]; NUM_LAYER] {',
+                'pub fn get_default_keymap() -> '
+                + '[[[KeyAction; COL]; ROW]; NUM_LAYER] {',
                 '    [',
                 ',\n    '.join(converted_layers),
                 '    ]',
