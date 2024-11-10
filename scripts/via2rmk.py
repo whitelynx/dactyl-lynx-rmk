@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+'''Convert a Vial layout to RKM configuration.'''
 
 import json
 import re
@@ -340,11 +341,11 @@ class Converter:
     def convert_layer(self, layer):
         converted_rows = (self.convert_row(row) for row in layer)
         if self.output_rust:
-            return '\n'.join(
+            return '\n'.join((
                 'layer!([',
-                ',\n            '.join(converted_rows),
-                '])'
-            )
+                '            ' + ',\n            '.join(converted_rows),
+                '        ])'
+            ))
         else:
             return f'[\n        {',\n        '.join(converted_rows)}\n    ]'
 
@@ -356,7 +357,7 @@ class Converter:
                 'pub fn get_default_keymap() -> '
                 + '[[[KeyAction; COL]; ROW]; NUM_LAYER] {',
                 '    [',
-                ',\n    '.join(converted_layers),
+                '        ' + ',\n        '.join(converted_layers),
                 '    ]',
                 '}',
             ))
@@ -370,7 +371,20 @@ class Converter:
 
 
 if __name__ == '__main__':
-    import sys
+    import argparse
+    parser = argparse.ArgumentParser(
+        prog='via2rmk.py',
+        description=globals()['__doc__'],
+        epilog='''By default this will output a `keymap = [...]` snippet to be
+            added to your `keyboard.toml`.'''
+    )
 
-    converter = Converter(output_rust=False)
-    print(converter.convert_vial_layout_file(sys.argv[1]))
+    parser.add_argument('filename',
+                        help='The Vial layout file (`.vil`) to convert')
+    parser.add_argument('-r', '--output-rust', action='store_true',
+                        help='output Rust code instead of TOML')
+
+    args = parser.parse_args()
+
+    converter = Converter(output_rust=args.output_rust)
+    print(converter.convert_vial_layout_file(args.filename))
