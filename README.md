@@ -10,9 +10,12 @@ Keyboard firmware for [the Dactyl Lynx keyboard][] using [RMK][]. (with [Vial][]
 
 ## Building the Firmware
 
-Before building for the first time, make sure `cargo-make` is installed, and update dependencies:
+Before building for the first time, make sure `cargo-make`, `flip-link`, and the compilation target for the RP2040 are
+installed, and update dependencies:
 ```bash
 cargo install --force cargo-make
+cargo install flip-link
+rustup target add thumbv6m-none-eabi
 cargo update
 ```
 
