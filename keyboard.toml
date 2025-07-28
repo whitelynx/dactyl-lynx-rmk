@@ -13,7 +13,7 @@ chip = "rp2040"
 # row2col = true
 rows = 14
 cols = 6
-layers = 6
+layers = 7
 
 keymap = [
     [
@@ -22,14 +22,14 @@ keymap = [
         ["Escape", "A", "O", "E", "U", "I"],
         ["LShift", "Semicolon", "Q", "J", "K", "X"],
         ["__", "LCtrl", "Grave", "Equal", "LeftBracket", "RightBracket"],
-        ["LCtrl", "LAlt", "LGui", "LShift", "Delete", "MO(5)"],
+        ["LCtrl", "LAlt", "LGui", "LShift", "Delete", "MO(6)"],
         ["Backspace", "__", "__", "__", "__", "__"],
         ["Kc6", "Kc7", "Kc8", "Kc9", "Kc0", "Backslash"],
         ["F", "G", "C", "R", "L", "Slash"],
         ["D", "H", "T", "N", "S", "Minus"],
         ["B", "M", "W", "V", "Z", "RShift"],
         ["__", "Left", "Down", "UP", "Right", "RGui"],
-        ["RGui", "RAlt", "RCtrl", "MO(5)", "Enter", "RShift"],
+        ["RGui", "RAlt", "RCtrl", "MO(6)", "Enter", "RShift"],
         ["__", "Space", "__", "__", "__", "__"]
     ],
     [
@@ -38,14 +38,30 @@ keymap = [
         ["Escape", "A", "S", "D", "F", "G"],
         ["LShift", "Z", "X", "C", "V", "B"],
         ["__", "LCtrl", "Grave", "Equal", "LeftBracket", "RightBracket"],
-        ["LCtrl", "LAlt", "LGui", "LShift", "Delete", "MO(5)"],
+        ["LCtrl", "LAlt", "LGui", "LShift", "Delete", "MO(6)"],
         ["Backspace", "__", "__", "__", "__", "__"],
         ["Kc6", "Kc7", "Kc8", "Kc9", "Kc0", "Minus"],
         ["Y", "U", "I", "O", "P", "Backslash"],
         ["H", "J", "K", "L", "Semicolon", "Quote"],
         ["N", "M", "Comma", "Dot", "Slash", "RShift"],
         ["__", "Left", "Down", "UP", "Right", "RGui"],
-        ["RGui", "RAlt", "RCtrl", "MO(5)", "Enter", "RShift"],
+        ["RGui", "RAlt", "RCtrl", "MO(6)", "Enter", "RShift"],
+        ["__", "Space", "__", "__", "__", "__"]
+    ],
+    [
+        ["Application", "Kc1", "Kc2", "Kc3", "Kc4", "Kc5"],
+        ["Tab", "Q", "W", "E", "R", "T"],
+        ["Escape", "A", "S", "D", "F", "G"],
+        ["LShift", "Z", "X", "C", "V", "B"],
+        ["__", "LCtrl", "Grave", "Equal", "LeftBracket", "RightBracket"],
+        ["LCtrl", "LAlt", "LGui", "LShift", "Delete", "MO(6)"],
+        ["Backspace", "__", "__", "__", "__", "__"],
+        ["Kc6", "Kc7", "Kc8", "Kc9", "Kc0", "Minus"],
+        ["Y", "U", "I", "O", "P", "Backslash"],
+        ["H", "J", "K", "L", "Semicolon", "Quote"],
+        ["N", "M", "Comma", "Dot", "Slash", "RShift"],
+        ["__", "Left", "Down", "UP", "Right", "RGui"],
+        ["RGui", "RAlt", "RCtrl", "MO(6)", "Enter", "RShift"],
         ["__", "Space", "__", "__", "__", "__"]
     ],
     [
@@ -54,14 +70,14 @@ keymap = [
         ["LCtrl", "LCtrl", "A", "S", "D", "F"],
         ["LShift", "LShift", "Z", "X", "C", "V"],
         ["__", "Kc6", "Kc7", "Kc8", "Kc9", "Kc0"],
-        ["LCtrl", "LAlt", "__", "LShift", "Enter", "MO(5)"],
+        ["LCtrl", "LAlt", "__", "LShift", "Enter", "MO(6)"],
         ["Space", "__", "__", "__", "__", "__"],
         ["Kc6", "Kc7", "Kc8", "Kc9", "Kc0", "Minus"],
         ["T", "Y", "U", "I", "O", "P"],
         ["G", "H", "J", "K", "L", "Semicolon"],
         ["B", "N", "M", "Comma", "Dot", "Slash"],
         ["__", "Left", "Down", "UP", "Right", "RGui"],
-        ["RGui", "RAlt", "RCtrl", "MO(5)", "Enter", "RShift"],
+        ["RGui", "RAlt", "RCtrl", "MO(6)", "Enter", "RShift"],
         ["__", "Space", "__", "__", "__", "__"]
     ],
     [
@@ -70,14 +86,14 @@ keymap = [
         ["Escape", "F11", "F12", "F13", "F14", "F15"],
         ["LShift", "F16", "F17", "F18", "F19", "F20"],
         ["__", "LCtrl", "F21", "F22", "F23", "F24"],
-        ["LCtrl", "LAlt", "LGui", "LShift", "Delete", "MO(5)"],
+        ["LCtrl", "LAlt", "LGui", "LShift", "Delete", "MO(6)"],
         ["Backspace", "__", "__", "__", "__", "__"],
         ["Calculator", "LeftBracket", "RightBracket", "WM(Kc9, LShift)", "WM(Kc0, LShift)", "Backslash"],
         ["NumLock", "Kp7", "Kp8", "Kp9", "KpAsterisk", "KpSlash"],
         ["KpEqual", "Kp4", "Kp5", "Kp6", "KpPlus", "KpMinus"],
         ["KpComma", "Kp1", "Kp2", "Kp3", "KpDot", "RShift"],
         ["__", "Left", "Down", "UP", "Right", "RGui"],
-        ["RGui", "RAlt", "RCtrl", "MO(5)", "KpEnter", "Kp0"],
+        ["RGui", "RAlt", "RCtrl", "MO(6)", "KpEnter", "Kp0"],
         ["__", "Space", "__", "__", "__", "__"]
     ],
     [
@@ -86,14 +102,14 @@ keymap = [
         ["MouseBtn5", "MouseBtn4", "MouseBtn3", "MouseBtn2", "MouseBtn1", "MouseWheelUp"],
         ["__", "Undo", "Cut", "Copy", "Paste", "MouseWheelDown"],
         ["__", "Again", "__", "__", "__", "__"],
-        ["__", "__", "__", "__", "__", "MO(5)"],
+        ["__", "__", "__", "__", "__", "MO(6)"],
         ["WwwBack", "__", "__", "__", "__", "__"],
         ["MediaEject", "PrintScreen", "ScrollLock", "Pause", "__", "SystemSleep"],
         ["MediaSelect", "__", "__", "__", "__", "Help"],
         ["BrightnessUp", "MouseLeft", "MouseDown", "MouseUp", "MouseRight", "Execute"],
         ["BrightnessDown", "AudioMute", "MediaPlayPause", "MediaStop", "__", "Select"],
         ["__", "MediaPrevTrack", "AudioVolDown", "AudioVolUp", "MediaNextTrack", "Stop"],
-        ["__", "__", "__", "MO(5)", "__", "__"],
+        ["__", "__", "__", "MO(6)", "__", "__"],
         ["__", "WwwForward", "__", "__", "__", "__"]
     ],
     [
@@ -144,6 +160,8 @@ col_offset = 0
 serial = [
     { instance = "UART0", tx_pin = "PIN_0", rx_pin = "PIN_1" },
 ]
+
+[split.central.matrix]
 input_pins = ["PIN_8", "PIN_9", "PIN_10", "PIN_11", "PIN_12", "PIN_13", "PIN_14"]
 output_pins = ["PIN_2", "PIN_3", "PIN_4", "PIN_5", "PIN_6", "PIN_7"]
 
@@ -155,5 +173,7 @@ col_offset = 0
 serial = [
     { instance = "UART0", tx_pin = "PIN_0", rx_pin = "PIN_1" },
 ]
+
+[split.peripheral.matrix]
 input_pins = ["PIN_8", "PIN_9", "PIN_10", "PIN_11", "PIN_12", "PIN_13", "PIN_14"]
 output_pins = ["PIN_2", "PIN_3", "PIN_4", "PIN_5", "PIN_6", "PIN_7"]

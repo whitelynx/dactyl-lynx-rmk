@@ -10,24 +10,24 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-rmk = { git = "https://github.com/HaoboGu/rmk.git", features = [
-    "async_matrix",
+rmk = { version = "0.6.1", features = [
     "split",
+    "rp2040_pio",
     ] }
 cortex-m-rt = "0.7.3"
-embassy-rp = { version = "0.2", features = [
+embassy-rp = { version = "0.4", features = [
+    "rp2040",
     "defmt",
     "time-driver",
     "critical-section-impl",
 ] }
-embassy-time = { version = "0.3", features = ["defmt"] }
+embassy-time = { version = "0.4", features = ["defmt"] }
 portable-atomic = { version = "1.5", features = ["critical-section"] }
-embassy-executor = { version = "0.6", features = [
+embassy-executor = { version = "0.7", features = [
     "defmt",
     "arch-cortex-m",
     "task-arena-size-32768",
     "executor-thread",
-    "integrated-timers",
 ] }
 embassy-futures = { version = "0.1", features = ["defmt"] }
 static_cell = { version = "2" }
