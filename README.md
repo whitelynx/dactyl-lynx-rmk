@@ -1,5 +1,15 @@
 # The Dactyl Lynx Keyboard - RMK Firmware
 
+---
+
+[![Moved to Codeberg](https://img.shields.io/badge/moved_to-Codeberg-%232185D0?logo=codeberg&logoColor=white)][codeberg project]
+
+**Notice: This project has [moved to Codeberg.org][codeberg project]. All further development will take place there.**
+
+[codeberg project]: https://codeberg.org/whitelynx/dactyl-lynx-rmk
+
+---
+
 Keyboard firmware for [the Dactyl Lynx keyboard][] using [RMK][]. (with [Vial][] support, written in [Rust][])
 
 [the Dactyl Lynx keyboard]: https://github.com/whitelynx/dactyl-lynx-keyboard
